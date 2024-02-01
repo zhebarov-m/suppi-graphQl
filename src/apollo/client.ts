@@ -1,11 +1,12 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
-const GITHUB_PERSONAL_ACCESS_TOKEN = 'ваш токен гит'
+const token = import.meta.env.VITE_REACT_APP_GITHUB_TOKEN; // Мой токен, можно поменять
+
 
 const client = new ApolloClient({
     uri: 'https://api.github.com/graphql',
     headers: {
-        Authorization: `Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}`,
+        Authorization: `Bearer ${token}`,
     },
     cache: new InMemoryCache()
 });
