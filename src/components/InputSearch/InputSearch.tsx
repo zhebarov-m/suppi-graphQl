@@ -24,7 +24,7 @@ const InputSearch: FC<InputSearchProps> = (props: InputSearchProps ) => {
     return (
         <div className={customClasses(styles.InputSearch, {}, [className!])}>
             <TextField
-                sx={{fontFamily: 'monospace', fz: 12, width: '500px'}}
+                sx={{fontFamily: 'monospace', fz: 12}}
                 onChange={handleChange}
                 label="Поиск репозиторий"
                 id="outlined-size-small"
